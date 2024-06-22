@@ -1,0 +1,17 @@
+#!/bin/bash
+# Create symbolic links in the corresponding possitions for the three
+# config files in the my_files repository. 
+
+ln -sf $PWD/bashrc ~/.bashrc
+
+if test -e ~/.emacs.d
+then
+    rm ~/.emacs.d
+fi
+ln -sf $PWD/emacs.d ~/.emacs.d
+
+if test -e ~/.local/bin
+then
+    rm ~/.local/bin
+fi
+ln -sf $PWD/bin ~/.local/bin

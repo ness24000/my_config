@@ -1,0 +1,9 @@
+#!/bin/bash
+IFS=:
+num=1
+for element in $PATH
+do
+    printf "%s_%d: %s\n" path $num $element
+    ((++num))
+done
+
