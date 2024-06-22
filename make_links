@@ -6,12 +6,14 @@ ln -sf $PWD/bashrc ~/.bashrc
 
 if test -e ~/.emacs.d
 then
-    rm ~/.emacs.d
+    mv ~/.emacs.d ~/.emacs.d_bu
+    rm -rf ~/.emacs.d
 fi
 ln -sf $PWD/emacs.d ~/.emacs.d
 
 if test -e ~/.local/bin
 then
-    rm ~/.local/bin
+    mv ~/.local/bin  ~/.local/bin_bu
+    rm -rf ~/.local/bin
 fi
 ln -sf $PWD/bin ~/.local/bin
