@@ -1,0 +1,3 @@
+#!/bin/bash
+STR=$(xclip -out)
+firefox --new-tab "https://www.reverso.net/text-translation#sl=dut&tl=eng&text=$STR%250A"
