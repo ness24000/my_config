@@ -2,20 +2,21 @@
 # Create symbolic links in the corresponding possitions for the three
 # config files in the my_files repository. 
 
-if test -e ~/.bashrc
-then
-    mv ~/.bashrc ~/.bashrc_bu
-fi
+back_up () {
+    if [ -L $1 ]
+    then
+	rm $1
+    elif [ -e $1 ]
+    then
+	mv $1 $1_bu_$(date +"%m%d%H%M%S")
+    fi
+}
+
+back_up ~/.bashrc
 ln -sf $PWD/bashrc ~/.bashrc
 
-if test -e ~/.emacs.d
-then
-    mv ~/.emacs.d ~/.emacs.d_bu
-fi
+back_up ~/.emacs.d
 ln -sf $PWD/emacs.d ~/.emacs.d
 
-if test -e ~/.local/bin
-then
-    mv ~/.local/bin  ~/.local/bin_bu
-fi
+back_up ~/.local/bin
 ln -sf $PWD/bin ~/.local/bin
