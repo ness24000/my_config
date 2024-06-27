@@ -18,8 +18,3 @@ source /usr/bin/virtualenvwrapper.sh
 # Aliases
 alias e='emacs -nw'
 alias lha='ls -lha'
-
-
-
-
-
