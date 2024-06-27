@@ -11,7 +11,13 @@ PS1='[\u@\h \W]\$ '
 
 # Add path to my scripts
 PATH=$PATH:~/.local/bin
+
+# Source virtualenvwrapper functions
 source /usr/bin/virtualenvwrapper.sh
+
+# Aliases
+alias e='emacs -nw'
+alias lha='ls -lha'
 
 
 
