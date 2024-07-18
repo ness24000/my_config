@@ -9,8 +9,7 @@ The structure of the directory is the following.
 │   ├── init.el
 ├── .gitignore
 ├── make_links
-├── readme.txt
-└── tree_file
+└── readme.txt
 
 
 This repository contains configuration files for Emacs and Bash, as
