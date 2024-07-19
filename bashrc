@@ -18,3 +18,4 @@ source /usr/bin/virtualenvwrapper.sh
 # Aliases
 alias e='emacs -nw'
 alias lha='ls -lha'
+alias remove_backups='rm -i $( ls -a | grep [#~] )'
