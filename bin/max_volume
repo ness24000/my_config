@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# This simple script is intended to be linked to a hotkey in my
+# personal computer where normal volume keys will not reach maximum
+# volume (it would be great to find another solution).
+
+pactl set-sink-volume @DEFAULT_SINK@ 170%
