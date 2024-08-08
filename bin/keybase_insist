@@ -1,0 +1,45 @@
+#!/bin/bash
+
+sleep_time=5
+insist_messages=( "Hello, sorry to insist but this is important" "Hi again, really need this could you send it" "Sorry to insist again but this is very important" )
+
+get_author () {
+    author=${2//[/}
+
+}
+
+split_messages () {
+    local IFS=$'\n'
+    for m in $1
+    do
+	case $m in
+	    \[*) message_array=$m ;;
+	esac
+    done
+
+    local IFS=' '
+
+    # We remove all *, used as marker of new messages by keybase
+    get_author ${message_array//\*/}
+
+}
+
+
+keybase chat send $1 "$2"
+
+sleep $sleep_time
+read_output=$( keybase chat read $1 )
+split_messages "$read_output"
+
+counter=0
+while [ $author != $1 ]
+do
+    keybase chat send $1 "${insist_messages[$counter]}"
+
+    sleep $sleep_time
+    read_output=$( keybase chat read $1 )
+    split_messages "$read_output"
+
+    counter=$(( $counter + 1 ))
+    [ $counter -ge ${#insist_messages[@]} ] && counter=0
+done
