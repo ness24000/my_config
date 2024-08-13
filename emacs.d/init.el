@@ -8,7 +8,7 @@
    '(:foreground default :background default :scale 4.0 :html-foreground "Black" :html-background "Transparent" :html-scale 1.0 :matchers
 		 ("begin" "$1" "$" "$$" "\\(" "\\[")))
  '(package-selected-packages
-   '(vertico python-black org auctex jupyter virtualenvwrapper elpy magit)))
+   '(vterm vertico python-black org auctex jupyter virtualenvwrapper elpy magit)))
 
 ;; suppress noise on startup
 (setq-default inhibit-startup-screen t
