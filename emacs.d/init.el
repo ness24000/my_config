@@ -8,7 +8,7 @@
    '(:foreground default :background default :scale 4.0 :html-foreground "Black" :html-background "Transparent" :html-scale 1.0 :matchers
 		 ("begin" "$1" "$" "$$" "\\(" "\\[")))
  '(package-selected-packages
-   '(vterm vertico python-black org auctex jupyter virtualenvwrapper elpy magit)))
+   '(orderless vertico python-black org auctex jupyter virtualenvwrapper elpy magit)))
 
 ;; suppress noise on startup
 (setq-default inhibit-startup-screen t
@@ -66,5 +66,8 @@
 (define-key python-mode-map (kbd "C-c f") 'python-black-buffer)
 (keymap-global-set "C-z" 'shell)
 
-
-
+;; setup orderless package for better search
+(use-package orderless
+  :ensure t
+  :config
+  (setq completion-styles '(orderless basic)))
