@@ -42,6 +42,9 @@
 ;; activate vertico (i.e. vertical minibuffer menues) on start up
 (add-hook 'after-init-hook' vertico-mode)
 
+;; make org start on org-indent-mode for readability
+(add-hook 'org-mode-hook' org-indent-mode)
+
 ;; make default font larger
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
