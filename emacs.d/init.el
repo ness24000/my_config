@@ -74,3 +74,5 @@
   :ensure t
   :config
   (setq completion-styles '(orderless basic)))
+;;
+(setq tramp-default-remote-shell "/bin/bash")
