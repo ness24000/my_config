@@ -8,7 +8,8 @@
    '(:foreground default :background default :scale 2.5 :html-foreground "Black" :html-background "Transparent" :html-scale 1.0 :matchers
 		 ("begin" "$1" "$" "$$" "\\(" "\\[")))
  '(package-selected-packages
-   '(orderless vertico python-black org auctex jupyter virtualenvwrapper elpy magit)))
+   '(projectile orderless vertico python-black org auctex jupyter virtualenvwrapper elpy magit))
+ '(vterm-tramp-shells '(("ssh" "/bin/bash"))))
 
 ;; suppress noise on startup
 (setq-default inhibit-startup-screen t
