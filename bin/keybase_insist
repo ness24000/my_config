@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 sleep_time=5
 insist_messages=( "Hello, sorry to insist but this is important" "Hi again, really need this could you send it" "Sorry to insist again but this is very important" )
