@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+current_state=$(gsettings get org.gnome.desktop.interface gtk-key-theme)
+
+if [ $current_state = \'Emacs\' ]
+then
+    gsettings set org.gnome.desktop.interface gtk-key-theme "Default"
+else
+    gsettings set org.gnome.desktop.interface gtk-key-theme "Emacs"
+fi
